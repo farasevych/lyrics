@@ -3,13 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>to the moon</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="lyrics">
-    <p>Let's swim to the moon, uh huh</p>
-    <p>Let's climb through the tide</p>
-    <p>Penetrate the evenin' that the </p>
-    <p>City sleeps to hide</p>
-  </div>
+  <div class="lyrics">Let's swim to the moon, uh huh <br> Let's climb through the tide <br> Penetrate the evenin' that the <br> City sleeps to hide</div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script type="text/javascript"  charset="utf-8">
+
+/*  var i = 0;
+    var console_testing = function () {
+      i++;
+      console.log ('hello world ' + i);
+    }*/
+
+
+
+/*  var log_words = function () {
+    var words = $(".lyrics").html().split(' ');
+    var i = 0;
+    var first = '';
+
+    while (i<words.length) {
+     first = first + '<span>' + words[i] + '</span>';
+     i = i+1;
+    }
+      console.log (first);  
+  }*/
+
+/*var wrap_in_span = function () {
+    var words = $(".lyrics").html().split(' ');
+    var i = 0;
+    var line = '';
+
+    while (i<words.length) {
+      var j = 0;
+      while (j<words[i].length) {
+        line = line + '<span>' + words[i][j] + '</span>';
+        j++;
+      }
+      i = i+1;
+    }
+      console.log (line);
+  }
+    $(".lyrics").click(wrap_in_span);*/
+    
+    var wrap_in_span = function () {
+    var words = $(".lyrics").html().split(' ');
+    var i = 0;
+    var line = '';
+
+    while (i<words.length) {
+      var j = 0;
+      while (j<words[i].length) {
+        line = line + '<span>' + words[i][j] + '</span>';
+        j++;
+      }
+      i = i+1;
+    }
+      console.log (line);
+  }
+    $(".lyrics").click(wrap_in_span)(
+      TimelineLite.staggerTo (".lyrics" , 2, {left:100, top:200} , {top:"+=100", opacity:0}, onComplete : function(){
+      
+    }});) 
+    ;
+   
+  </script>
+    }
 </body>
 </html>
