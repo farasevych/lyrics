@@ -6,7 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="lyrics">Let's swim to the moon, uh huh <br> Let's climb through the tide <br> Penetrate the evenin' that the <br> City sleeps to hide</div>
+  <div class="lyrics">
+  Let's swim to the moon, uh huh <br> Let's climb through the tide <br> Penetrate the evenin' that the <br> City sleeps to hide
+  </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
@@ -64,13 +66,8 @@
     }
       console.log (line);
   }
-    $(".lyrics").click(wrap_in_span)(
-      TimelineLite.staggerTo (".lyrics" , 2, {left:100, top:200} , {top:"+=100", opacity:0}, onComplete : function(){
-      
-    }});) 
-    ;
+    $(".lyrics").click(wrap_in_span);
    
-  </script>
-    }
+  </script>    
 </body>
 </html>
